@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Parallax Scrolling Effect</title>
+        
+    </head>
+    <body>
+        <section class="zoom"><link rel="stylesheet" href="style1.css">
+            <img src="mountain1.png" id="layer1">
+            <img src="mountain2.png" id="layer2">
+            <img src="text.png" id="text">
+        </section>
+        <script type="text/javascript">
+        var layer1= document.getElementById('layer1')
+        scroll = window.pageYOffset;
+        document.addEventListener('scroll',function(e) {
+            var offset = window.pageYOffset;
+            scroll = offset
+            layer1.style.width = (100 + scroll/5) + '%' ;
+        })
+        var layer2= document.getElementById('layer2')
+        scroll = window.pageYOffset;
+        document.addEventListener('scroll',function(f){
+            var offset = window.pageYOffset;
+            scroll = offset
+            layer2.style.width = (100 + scroll/5) + '%' ;
+            layer2.style.left = scroll/50 + '%' ;
+        })
+        var text= document.getElementById('text')
+        scroll = window.pageYOffset;
+        document.addEventListener('scroll',function(f){
+            var offset = window.pageYOffset;
+            scroll = offset
+            layer2.style.width = (100 + scroll/5) + '%' ;
+            text.style.top = - scroll/20 + '%' ;
+        })
+        </script>
+            <section class="content">
+                    <h2>Simple Background Parallax Using CSS and Javascript</h2>
+                    <p>Aute id et eiusmod mollit mollit ut consectetur
+                         anim cupidatat do qui cupidatat ullamco.
+                          Ut commodo dolore aliquip ut labore aliquip 
+                          reprehenderit mollit excepteur minim sit minim. 
+                           Ea do do exercitation nulla esse ad fugiat.
+                        Amet fugiat minim officia labore pariatur Lorem est deserunt 
+                        aute mollit aliqua irure cillum. Esse magna aliqua Lorem
+                         elit veniam aliquip duis. Deserunt cillum cillum 
+                        eu voluptate adipisicing consequat in.Elit minim amet officia dolor fugiat magna irure proident eu excepteur nulla sint sit excepteur. Fugiat amet exercitation magna cupidatat do et laborum. Proident cillum magna reprehenderit cupidatat nisi anim aliqua est fugiat sit magna deserunt quis. Nostrud tempor ea reprehenderit qui fugiat dolore dolore voluptate pariatur incididunt.Proident dolore cupidatat cupidatat quis eu. Mollit ullamco deserunt culpa laborum. Amet et do sint sit veniam labore elit non aliqua exercitation.Enim eiusmod est nostrud veniam tempor id aute. Tempor nostrud tempor tempor laborum labore ex ullamco. Proident anim amet proident culpa labore. Elit eu magna amet ex exercitation ut. Nostrud cillum minim id culpa eiusmod ea elit. Incididunt ullamco minim sunt laborum anim non nisi aliqua consequat. Ex reprehenderit officia occaecat labore mollit commodo.
+                    Reprehenderit eiusmod cupidatat id excepteur amet aute nisi nostrud. Elit esse labore elit nisi commodo dolore. Velit elit et amet nisi labore aute sit.Lorem esse proident cillum do. Lorem velit non quis esse deserunt tempor. Esse dolore enim officia pariatur id non esse enim magna excepteur ex dolor fugiat. Mollit ipsum sit cupidatat enim.Laborum est exercitation culpa exercitation cupidatat excepteur do velit adipisicing. Elit quis fugiat quis nisi sit incididunt aute mollit dolor. Et dolor sint anim ut veniam ex sit minim nostrud quis ex minim. Sint cillum laborum minim culpa. Tempor incididunt ex tempor ad irure aute deserunt enim consequat nulla dolor. Et do ea officia aliquip ipsum. Anim occaecat occaecat commodo quis deserunt veniam voluptate incididunt nostrud nulla.</p>
+            </section>
+            <section><link rel="stylesheet" href="style.css">
+                <div class="container">
+                    <ul id="scene">
+                        <li class="layer" data-depth=".1"><img src="text1.png"></li>
+                        <li class="layer" data-depth="1"><img src="planet1.png"></li>
+                        <li class="layer" data-depth="-1"><img src="planet2.png"></li>
+                        <li class="layer" data-depth="2"><img src="astronaut.png"></li>
+                        <li class="layer" data-depth="0.5"><img src="rocket.png"></li>
+                    </ul>
+                </div>
+                <script src="parallax.js"></script>
+                <script>
+                    var scene = document.getElementById('scene');
+                    var parallax = new Parallax(scene);
+                </script>
+            </section>
+    </body>
+</html>

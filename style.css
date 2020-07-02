@@ -1,0 +1,20 @@
+body
+{
+	margin: 0;
+	padding: 0;
+}
+.container
+{
+	overflow: hidden;
+	background-image: url(background.jpg);
+	background-attachment: fixed;
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+.mixBlnd
+{
+	background-blend-mode: screen;
+}
